@@ -1,0 +1,122 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  background-color: white;
+}
+
+.header {
+  flex: 0 0 10%;
+  background-color: lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar {
+  flex: 0 0 20%;
+  background-color: lightgray;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger_menu {
+  position: absolute;
+  top: 100px;
+  /* right: 60%; */
+  left: 3%;
+  width: 100vw;
+  padding: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  background-color: lightgray;
+  /* z-index: 10; */
+}
+
+.sidebar button,
+.hamburger_menu button {
+  margin-bottom: 7px;
+}
+
+.logo {
+  margin: 5px;
+  background-color: blue;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.menu_icon {
+  display: none;
+  cursor: pointer;
+}
+
+.line {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin-bottom: 4px;
+  background-color: black;
+}
+
+.header > .buttons > button {
+  margin: 5px 25px 5px 5px;
+  width: 100px;
+}
+
+.header > .login_button {
+  margin: 10px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+@media (max-width: 567px) {
+  .logo {
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+  }
+  .header > .buttons > button {
+    margin: 5px 5px 5px 5px;
+    width: 50px;
+  }
+}
+
+@media (max-width: 496px) {
+  .header > .login_button {
+    margin: 10px;
+    height: 35px;
+    border-radius: 10px;
+  }
+  .header > .buttons {
+    display: none;
+  }
+
+  .menu_icon {
+    display: inline-block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (min-width: 496px) {
+  .hamburger_menu {
+    display: none;
+  }
+}
